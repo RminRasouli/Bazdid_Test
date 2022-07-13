@@ -9,6 +9,7 @@ import dagger.hilt.components.SingletonComponent
 import ir.project.testbazdid.data.remote.RemoteDataSource
 import ir.project.testbazdid.data.remote.RemoteDataSourceApp
 import ir.project.testbazdid.data.remote.apiService.ApiService
+import ir.project.testbazdid.utils.Constanse.ADDRESS_SERVER
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers
 import okhttp3.OkHttpClient
@@ -45,7 +46,7 @@ object AppModule {
             .connectTimeout(60, TimeUnit.SECONDS)
             .build()
 
-        return Retrofit.Builder().baseUrl("https://otf.rmto.ir")
+        return Retrofit.Builder().baseUrl(ADDRESS_SERVER)
             .addConverterFactory(gsonConverterFactory)
             .client(okHttpClient)
             .build()

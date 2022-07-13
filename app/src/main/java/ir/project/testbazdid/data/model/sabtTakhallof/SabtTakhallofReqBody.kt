@@ -1,10 +1,12 @@
 package ir.project.testbazdid.data.model.sabtTakhallof
 
 data class SabtTakhallofReqBody(
-    val MobRecordId: String,
-    val PWD: String,
-    val RID: String,
+    val MobRecordId : Int ,
     val UID: String,
+    val PWD: String,
+    val srdate: String,
     val srDateFull: String,
-    val srdate: String
+    val RID : Int
 )
+
+
